@@ -29,7 +29,7 @@
 
 ---
 
-## 🗺️ 学习路线
+## 🗺️ Java 学习路线
 
 ```
 JavaSE 基础（当前）
@@ -38,13 +38,18 @@ JavaSE 基础（当前）
   ├── 面向对象（封装、继承、多态）
   ├── 字符串 / 集合（ArrayList）
   ├── 面向对象进阶（接口、内部类、static）
-  └── 常用 API / 算法 / 集合进阶
+  └── 异常 / 多线程 / IO / Stream / 反射
 ↓
-MySQL → JDBC → JavaWeb → SSM → SpringBoot
-→ Redis → SpringCloud → RocketMQ → JVM → JUC
+MySQL（数据库基础，重点）
+↓
+SpringBoot（后端核心框架，直接替代 SSM）
+↓
+Redis + 黑马点评项目（缓存 + 第一个后端项目）
+↓
+（可后置）JVM / JUC —— 冲大厂深挖，基础阶段可缓
 ```
 
-> 详细 90 天学习计划见另一份笔记，按阶段推进、边学边记录。
+> 说明：JavaWeb 已取代、SSM 用 SpringBoot 整合，均了解即可。详细学习计划见另一份笔记。
 
 ---
 
