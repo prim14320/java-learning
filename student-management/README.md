@@ -1,16 +1,23 @@
 # 学生管理系统
 
-> 一个用 **Java 基础语法** 实现的简易控制台学生管理系统。学习 JavaSE 的第一个完整练习项目。
+> 一个用 **Java 基础语法** 实现的简易控制台学生管理系统（含登录模块）。学习 JavaSE 的练习项目。
 
 ---
 
 ## 📋 功能
 
+### 登录模块（`LoginSystem`）
+- ✅ 登录（含图形验证码校验）
+- ✅ 注册（用户名 / 身份证 / 手机号格式校验 + 密码二次确认）
+- ✅ 忘记密码（凭身份证 + 手机号验证后重置）
+- ✅ 退出
+
+### 学生管理模块（`StudentSystem`）
 - ✅ 添加学生（自动校验学号是否重复）
 - ✅ 删除学生
 - ✅ 查询学生（列表展示，学号/姓名/年龄/住址）
 - ✅ 修改学生信息
-- ✅ 退出系统
+- ✅ 退出
 
 数据存储在内存中（`ArrayList`），退出后不保留。后续可扩展为数据库存储。
 
@@ -25,9 +32,10 @@
 
 ## 🚀 使用方法
 
-1. 把 `src` 目录下的两个 `.java` 文件放入 IDEA 的一个 Java 项目中
-2. 运行 `StudentSystem.java` 的 `main` 方法
-3. 按菜单提示输入数字操作（1 添加、2 删除、3 查询、4 修改、5 退出）
+1. 把 `src` 目录下的 `.java` 文件放入 IDEA 的一个 Java 项目中
+2. 运行 `LoginSystem.java` 的 `main` 方法
+3. 先登录（内置账号：`swd` / `qwer123456`），登录成功后进入学生管理菜单
+4. 按菜单提示输入数字操作
 
 ---
 
@@ -35,8 +43,10 @@
 
 ```
 studentsystem/
-├── Student.java          # 学生实体类（学号/姓名/年龄/住址 + 封装）
-└── StudentSystem.java    # 主程序（菜单循环 + 增删改查逻辑）
+├── LoginSystem.java      # 登录模块（登录/注册/忘记密码 + 验证码）
+├── User.java             # 用户实体类（用户名/密码/身份证/手机号）
+├── StudentSystem.java    # 学生管理模块（增删改查）
+└── Student.java          # 学生实体类（学号/姓名/年龄/住址）
 ```
 
 ---
@@ -45,10 +55,12 @@ studentsystem/
 
 - 面向对象封装（private + getter/setter + 构造方法）
 - `ArrayList` 集合的增删改查
+- `static` 静态变量、静态代码块初始化数据
 - `Scanner` 控制台输入、`switch` 分支、`while` 循环
-- 方法抽取（`addStudent` / `deleteStudent` / `queryStudent` / `updateStudent`）
-- 学号唯一性校验（`checkid`）
-- 空列表判断（`null` 保护，避免遍历空列表）
+- `String` 常用方法（length / charAt / equals / equalsIgnoreCase）
+- `StringBuilder` 拼接、`Random` 生成验证码
+- 格式校验：用户名（3-15 位含字母）、身份证（18 位）、手机号（11 位）
+- 方法抽取与复用（`findUser` / `getUserIndex` 等）
 
 ---
 
@@ -69,4 +81,5 @@ studentsystem/
 
 - 用 MySQL 替代 `ArrayList` 持久化数据
 - 用 SpringBoot + MyBatis 改造成 Web 接口版本
-- 增加登录/权限功能
+- 密码加密存储（MD5 / BCrypt）
+- 登录状态用 Session 维护，登录后不再直接调用 `StudentSystem.main`
