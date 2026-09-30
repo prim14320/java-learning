@@ -8,48 +8,46 @@
 
 本仓库用于记录我学习 Java 过程中的 **学习笔记** 和 **练习项目** 的完整代码。
 
-- **学习笔记**：用 Typora 记录，包含知识点、代码示例、踩坑记录，统一在 `学习笔记.md`
+- **学习笔记**：用 Typora 记录，包含知识点、代码示例、踩坑记录
+  - `学习笔记.md` —— JavaSE 全部笔记
+  - `Mysql学习笔记.md` —— MySQL 全部笔记
 - **练习项目**：完整的可运行项目代码（带 README 说明）
 
 ---
 
 ## 🎯 当前进度
 
-**📅 阶段：JavaSE ✅ 已完成（该学的核心部分）**
+**✅ JavaSE 已完成**
 
-- ✅ Java 入门 / 基础概念 / 运算符 / 流程控制
-- ✅ 数组 / 方法 / 面向对象（封装、构造方法、this）
-- ✅ 面向对象进阶（继承、多态、抽象类、接口、内部类）
-- ✅ 字符串（String / StringBuilder / StringJoiner）
-- ✅ 集合进阶（Collection / List / LinkedList / Set / Map / 泛型）
-- ✅ 常用 API（Math / Object / BigDecimal / 正则 / 时间 / 包装类）
-- ✅ 常见算法（查找 / 冒泡 / 选择 / 插入 / 快速排序）
-- ✅ Stream 流 / 方法引用 / 异常
-- ✅ File 类 / IO 流（字节流 / 字符流 / 缓冲流）
-- ✅ 多线程 & JUC（线程创建 / 线程安全 / 阻塞队列 / 线程池）
-- ✅ 两个完整项目：**学生管理系统**、**拼图游戏**
+- 基础语法 / 面向对象 / 集合 / 字符串 / 常用 API / 常见算法
+- Stream / 方法引用 / 异常 / File / IO 流 / 多线程 & JUC
+- 两个项目：**学生管理系统**、**拼图游戏**
 
-> **JavaSE 阶段完成** — 下一步进入 **MySQL 数据库**。
+**✅ MySQL 已完成（基础篇 + 进阶篇核心）**
+
+- SQL（DDL / DML / DQL / DCL）、函数、约束
+- 多表查询、事务
+- 存储引擎、索引、SQL 优化
+- 视图 / 存储过程 / 触发器 / 锁
+- InnoDB 引擎（逻辑结构 / 事务原理 / MVCC）
+
+> 🔄 **下一步：JavaWeb + SpringBoot**（黑马 AI+JavaWeb，含 Tlias 项目）
 
 ---
 
 ## 🗺️ Java 学习路线
 
 ```
-✅ JavaSE 基础（已完成）
-  ├── 基本语法 / 面向对象 / 集合 / 字符串
-  ├── 常用 API / 常见算法 / Stream / 异常
-  └── File / IO 流 / 多线程 & JUC
-🔄 MySQL（数据库基础，重点）  ← 下一个
+✅ JavaSE 基础
+✅ MySQL（数据库）
+🔄 JavaWeb + SpringBoot  ← 当前（含 Tlias 项目）
 ↓
-SpringBoot（后端核心框架，直接替代 SSM）
+Redis + 黑马点评项目（缓存 + 项目）
 ↓
-Redis + 黑马点评项目（缓存 + 第一个后端项目）
+（可选）SpringCloud / 消息队列 / JVM
 ↓
-（可后置）JVM / JUC —— 冲大厂深挖，基础阶段可缓
+Python AI（Python → 数据处理 → 机器学习 → 大模型应用）
 ```
-
-> 说明：JavaWeb 已取代、SSM 用 SpringBoot 整合，均了解即可。
 
 ---
 
@@ -57,7 +55,8 @@ Redis + 黑马点评项目（缓存 + 第一个后端项目）
 
 | 路径 | 说明 |
 |---|---|
-| `学习笔记.md` | JavaSE 全部学习笔记（基础语法 / 常用 API / 常见算法 / 集合 / Stream / 方法引用 / 异常 / File / IO / 多线程 & JUC） |
+| `学习笔记.md` | JavaSE 全部笔记（基础语法 / 常用 API / 常见算法 / 集合 / Stream / 方法引用 / 异常 / File / IO / 多线程 & JUC） |
+| `Mysql学习笔记.md` | MySQL 全部笔记（SQL / 函数 / 约束 / 多表 / 事务 / 索引 / 锁 / InnoDB 等） |
 | `student-management/` | 学生管理系统项目（增删改查 + 登录模块 + 代码问题清单） |
 | `puzzlegame/` | 拼图游戏项目（Swing + 面向对象综合练习） |
 | `README.md` | 仓库说明（本文件） |
@@ -66,9 +65,9 @@ Redis + 黑马点评项目（缓存 + 第一个后端项目）
 
 ## 🚀 下一步计划
 
-1. 学习 **MySQL**（SQL 基础 → 多表查询 → 事务 → 索引 → 存储引擎）
-2. 用 MySQL 持久化学生管理系统（练手）
-3. 学习 **SpringBoot**，把项目改造成 Web 接口版本
+1. 学习 **JavaWeb + SpringBoot**（黑马 AI+JavaWeb 版），完成 Tlias 项目
+2. 学习 **Redis**，完成黑马点评项目
+3. 准备面试（八股 + 算法 + 项目），再切 **Python AI**
 
 ---
 
@@ -78,4 +77,5 @@ Redis + 黑马点评项目（缓存 + 第一个后端项目）
 - **2026-08**：上传第一个完整项目「学生管理系统」
 - **2026-08**：上传「拼图游戏」项目
 - **2026-09**：笔记整理统一标题，新增 Set / Map / Stream / 方法引用 / 异常
-- **2026-09**：补充 File / IO / 多线程 & JUC / 泛型 / LinkedList / 阻塞队列，**JavaSE 阶段完成**
+- **2026-09**：补充 File / IO / 多线程 & JUC 等，**JavaSE 阶段完成**
+- **2026-09**：上传 **MySQL 全篇笔记**（SQL / 函数 / 约束 / 多表 / 事务 / 索引 / 锁 / InnoDB）
